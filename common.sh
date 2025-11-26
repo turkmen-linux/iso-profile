@@ -2,6 +2,8 @@
 # fstab add tmpfs
 echo "tmpfs /tmp tmpfs rw 0 0" > /etc/fstab
 ln -s /proc/mounts /etc/mtab
+mkdir -p /etc/suid.d/
+touch /etc/suid
 # enable login from shadow
 chmod u+s /usr/bin/su || true
 echo "/usr/bin/su" > /etc/suid.d/shadow
