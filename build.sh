@@ -9,7 +9,7 @@ function build(){
     variant=$1
     suffix=$2
     if [ ! -d $variant$suffix ] ; then
-        git clone https://gitlab.com/turkman/devel/assets/mkiso $variant$suffix
+        git clone https://gitlab.com/turkmen-linux/devel/assets/mkiso $variant$suffix
     fi
     cd $variant$suffix
     if [ -f ../profiles/$variant.sh ] ; then
@@ -19,10 +19,10 @@ function build(){
         cat ../common.sh >> custom
     fi
     bash -ex mkiso.sh
-    mv turkman.iso /output/turkman-$variant$suffix.iso
+    mv turkmen.iso /output/turkmen-$variant$suffix.iso
     mount -t proc proc rootfs/proc
-    echo "####" $variant$suffix "####" > /output/turkman-$variant$suffix.revdep-rebuild
-    chroot rootfs ymp rbd --no-color 2>/dev/null | tee -a /output/turkman-$variant$suffix.revdep-rebuild
+    echo "####" $variant$suffix "####" > /output/turkmen-$variant$suffix.revdep-rebuild
+    chroot rootfs ymp rbd --no-color 2>/dev/null | tee -a /output/turkmen-$variant$suffix.revdep-rebuild
     umount -lf rootfs/proc
     cd ..
 }

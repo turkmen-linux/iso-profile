@@ -1,1 +1,1 @@
-# Turkman Linux iso profiles
+# Türkmen Linux iso profiles
