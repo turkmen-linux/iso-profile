@@ -2,7 +2,7 @@
 # X11 install
 ymp repo --update --allow-oem --ignore-gpg
 ymp it xinit xorg-server xterm freetype xauth xkbcomp xkeyboard-config @x11.drivers --no-emerge --allow-oem --jobs=1
-ymp it elogind libtool shadow pipewire wireplumber fuse fuse2 --no-emerge --allow-oem --jobs=1
+ymp it elogind libtool shadow pipewire wireplumber fuse fuse2 udisks2 --no-emerge --allow-oem --jobs=1
 # install kde
 ymp it @kde.plasma @kde.frameworks dolphin konsole dejavu tzdata seatd --no-emerge --allow-oem --jobs=1
 # fixme: plasma-shell dependency
@@ -25,6 +25,7 @@ rc-update add eudev sysinit
 rc-update add fuse sysinit
 rc-update add seatd default
 rc-update add upowerd default
+rc-update add udisks default
 rc-update add wpa_supplicant default
 rc-update add networkmanager default
 rc-update add sddm default
