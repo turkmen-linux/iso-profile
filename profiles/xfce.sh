@@ -21,6 +21,9 @@ rc-update add networkmanager default
 rc-update add lightdm default
 rc-update add bluetooth default
 # enable services
+rc-update add pipewire default
+rc-update add pipewire-pulse default
+rc-update add wireplumber default
 rc-update add polkit default
 rc-update add elogind boot
 rc-update add udisks default

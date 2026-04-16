@@ -20,6 +20,9 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 rm /etc/localtime
 ln -s /usr/share/zoneinfo/UTC /etc/localtime
 # enable services
+rc-update add pipewire default
+rc-update add pipewire-pulse default
+rc-update add wireplumber default
 rc-update add elogind boot
 rc-update add eudev sysinit
 rc-update add fuse sysinit

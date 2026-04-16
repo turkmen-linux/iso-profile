@@ -17,6 +17,9 @@ ymp it wpa_supplicant networkmanager bluez --no-emerge --allow-oem
 # install lightdm
 ymp it lightdm-pardus-greeter lightdm --no-emerge --allow-oem
 # enable services
+rc-update add pipewire default
+rc-update add pipewire-pulse default
+rc-update add wireplumber default
 rc-update add elogind boot
 rc-update add eudev sysinit
 rc-update add fuse sysinit
