@@ -6,7 +6,9 @@ ln -s /proc/mounts /etc/mtab
 touch /etc/suid
 mkdir -p /etc/suid.d/
 rc-update add nosuid
+# suidless su
 ymp install suidless-su --no-emerge --allow-oem
+rc-update add su sysinit
 # set language
 mkdir -p /lib64/locale
 echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
