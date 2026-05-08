@@ -2,12 +2,11 @@
 # fstab add tmpfs
 echo "tmpfs /tmp tmpfs rw 0 0" > /etc/fstab
 ln -s /proc/mounts /etc/mtab
-mkdir -p /etc/suid.d/
+# nosuid
 touch /etc/suid
-# enable login from shadow
-chmod u+s /usr/bin/su || true
-echo "/usr/bin/su" > /etc/suid.d/shadow
+mkdir -p /etc/suid.d/
 rc-update add nosuid
+ymp install suidless-su --no-emerge --allow-oem
 # set language
 mkdir -p /lib64/locale
 echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
