@@ -9,7 +9,7 @@ ymp it @lxde openbox --no-emerge --allow-oem --jobs=1
 ymp it firefox-installer --no-emerge --allow-oem --jobs=1
 # install flatpak
 ymp it flatpak --no-emerge --allow-oem
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo || true
 # install wifi and bluetooth
 ymp it wpa_supplicant networkmanager bluez --no-emerge --allow-oem
 # install lightdm

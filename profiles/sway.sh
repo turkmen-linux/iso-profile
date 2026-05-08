@@ -8,7 +8,7 @@ ymp it pango xcb-util-renderutil libbsd libXfont2 libmd brotli gdk-pixbuf --no-e
 #ymp it weston --no-emerge --allow-oem
 # install flatpak
 ymp it flatpak dconf --no-emerge --allow-oem
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo || true
 # enable services
 rc-update add elogind boot
 rc-update add eudev sysinit

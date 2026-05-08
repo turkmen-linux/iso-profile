@@ -15,7 +15,7 @@ ymp it sddm --no-emerge --allow-oem --jobs=1
 ymp it firefox-installer --no-emerge --allow-oem --jobs=1
 # install flatpak
 ymp it flatpak --no-emerge --allow-oem
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo || true
 # set timezone
 rm /etc/localtime
 ln -s /usr/share/zoneinfo/UTC /etc/localtime
