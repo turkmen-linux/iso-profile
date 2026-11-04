@@ -9,7 +9,7 @@ function build(){
     variant=$1
     suffix=$2
     if [ ! -d $variant$suffix ] ; then
-        git clone https://gitlab.com/turkmen-linux/devel/assets/mkiso $variant$suffix
+        git clone https://codeberg.org/turkmen-linux/mkiso $variant$suffix
     fi
     cd $variant$suffix
     if [ -f ../profiles/$variant.sh ] ; then
