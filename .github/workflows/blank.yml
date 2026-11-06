@@ -15,7 +15,7 @@ jobs:
         build_type: [xfce , cinnamon, lxde, kde, x11, sway, minimal, hyprland]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Run build script
         continue-on-error: true
